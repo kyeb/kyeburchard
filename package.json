@@ -1,0 +1,17 @@
+{
+  "name": "kyeb",
+  "version": "1.0.0",
+  "description": "Personal website for me (Kye Burchard)",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kyeb",
+  "license": "MIT"
+}
