@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "Personal website for me (Kye Burchard)",
   "main": "gulpfile.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "browser-sync": "^2.24.5",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
-  },
-  "devDependencies": {},
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.1"},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },"repository": { "type": "git",
+    "url" : "https://github.com/kyeb/kyeburchard.git"
   },
   "author": "kyeb",
   "license": "MIT"
