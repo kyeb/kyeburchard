@@ -12,7 +12,7 @@
     crossorigin="anonymous"></script>
   <script src="semantic/semantic.min.js"></script>
   <!-- compiled scss -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121875860-1"></script>
   <script>
@@ -23,47 +23,100 @@
   </script>
 </head>
 <body>
-  <div class="ui stackable grid">
-    <div class="row"></div>
-    <div class="centered row">
-      <div class="eight wide column">
-        <div class="ui segment">
-          <h1>Kye Burchard</h1>
-        </div>
-      </div>
+
+<div class="ui stackable grid">
+  <!-- <div class="row"></div> -->
+  <div class="row"></div>
+  <div class="three wide column"></div>
+  <div class="ten wide column">
+    <div class="ui padded segment">
+      <h1 class="ui header">Kye Burchard</h1>
     </div>
-    <div class="centered row">
-      <div class="eight wide column">
-        <div class="ui segment">
-          <h2>About me</h2>
-          <div class="ui divider"></div>
+  </div>
+  <div class="three wide column computer tablet only"></div>
+  <div class="three wide column computer tablet only"></div>
+  <div class="ten wide column">
+    <div class="ui padded segment">
+      <h2 class="ui dividing header">About me</h2>
+      <p>
+        I'm a sophomore in <a href="https://www.eecs.mit.edu/" target="_blank">EECS</a>
+        at MIT (Course 6-2), a tech enthusiast, and an optimist with a passion for learning.
+        At the moment, I'm working on an experiment at the MIT Media Lab 
+        using the <a href="http://www.rhythm.mit.edu/" target="_blank">Rhythm Badges</a>
+        to study team dynamics in the Delta V accelerator program at MIT.
+      </p><p>
+        In my spare time, I'm working on learning web development and system administration, 
+        perfecting my Linux setup, and attempting to become an i3wm and vim user.
+        I love being outdoors whenever I can find time - whether that means skiing, 
+        mountain biking, and hiking when I'm home in Montana, exploring the Boston area,
+        or just finding a spot outside to sit down with a good book.
+      </p>
+    </div>
+  </div>
+  <div class="three wide column column computer tablet only"></div>
+  <div class="three wide column column computer tablet only"></div>
+  <div class="ten wide column">
+    <div class="ui padded segment">
+      <div class="ui stackable grid">
+        <div class="fourteen wide column">
+          <h2 class="ui dividing header">Projects & Experience</h2>
+        </div>
+        <div class="eight wide column">
+          <h3>Street Smarts</h3>
           <p>
-            I'm a sophomore in <a href="https://www.eecs.mit.edu/">EECS</a> (6-2) at MIT, a tech 
-            enthusiast, and an optimist with a passion for learning.
-            At the moment, I'm working on an experiment using the 
-            <a href="http://www.rhythm.mit.edu/">Rhythm Badges</a>
-            to study team dynamics in the Delta V accelerator program at MIT.
-          </p>
-          <p>
-            In my spare time, I'm attempting to learn web development and system administration, 
-            perfect my Linux setup, and become an i3wm and vim user.
-          </p>
-          <p>
-            I love being outdoors whenever I can find time - whether that means skiing, mountain biking, 
-            and hiking when I'm home in Montana, exploring the Boston area, or just finding a spot 
-            outside to sit down with a good book.
+            Street Smarts is a complete IoT system that brings the power of 
+            interconnected devices to emergency response and street lamps.
+          </p><p>
+            Originally conceived as the final project for 
+            <a href="https://iesc-s2.mit.edu/608/spring18" target="_blank">6.08</a>, 
+            the StreetSmarts system is capable of fully facilitating communication between 
+            street lamps across the city, emergency providers, and an web interface. 
+            In an emergency situation, first responders are immediately notified
+            of the location and quickest route via the responder module. Within a
+            few seconds street lamps along that route begin to flash red, signaling
+            drivers to move aside and providing visual directions to the first 
+            responders, removing the need for slow GPS or perfect knowledge of
+            the city.
+          </p><p>
+            You can find a full description of the system, including the web interface,
+            code documentation, and insight into the development process
+            <a href="https://lrylander.github.io/StreetSmarts/index.html" target="_blank">here</a>.
           </p>
         </div>
-      </div>
-    </div>
-    <div class="centered row links">
-      <div class="eight wide column">
-        <div class="ui segment">
-          <a href="https://github.com/kyeb" class="footerIcon"><i class="big github link icon"></i></a>
-          <i class="big facebook f link icon"></i>
+        <div class="eight wide column container">
+          <div class="vid-wrapper">
+            <iframe class="vid" src="https://www.youtube.com/embed/yxqBb4jaiFQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="fourteen wide column">
+          <div class="row ui section divider"></div>
+            <h3>HackMIT</h3>
+            <p>
+              content
+            </p>
+        </div>
+        <div class="fourteen wide column">
+          <div class="row ui section divider"></div>
+            <h3>MHEC</h3>
+            <p>
+              content
+            </p>
         </div>
       </div>
     </div>
   </div>
+  <div class="three wide column"></div>
+  <div class="three wide column"></div>
+  <div class="ui ten wide column">
+    <div class="ui equal width grid">
+      <i class="column big github link icon" onclick="window.open('https://github.com/kyeb')"></i>
+      <i class="column big instagram link icon" onclick="window.open('https://instagram.com/kye.burchard')"></i>
+      <i class="column big facebook f link icon" onclick="window.open('https://facebook.com/kyeburchard')"></i>
+      <i class="column big mail link icon" onclick="window.open('mailto:kyeb@mit.edu')"></i>
+    </div>
+  </div>
+  <div class="three wide column"></div>
+  <div class="row"></div>
+</div>
 </body>
 </html>
