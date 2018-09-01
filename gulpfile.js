@@ -1,55 +1,45 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
-var autoprefixer = require('gulp-autoprefixer');
+var gulp = require('gulp'),
+  sass = require('gulp-sass'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  cssnano = require('cssnano')
+  browsersync = require('browser-sync').create()
+    
+var paths = {
+  styles: {
+    src: 'scss/styles.scss',
+    dest: 'css'
+  }
+}
 
+function style(){
+  return gulp.src(paths.styles.src)
+  .pipe(sass()).on('error', sass.logError)
+  .pipe(postcss([
+    autoprefixer(),
+    cssnano()
+  ]))
+  .pipe(gulp.dest(paths.styles.dest))
+  .pipe(browsersync.stream())
+}
 
+var reload = browsersync.reload;
 
-// Compiles SCSS files from /scss into /css
-gulp.task('sass', function() {
-    return gulp.src('scss/styles.scss')
-      .pipe(sass())
-      .pipe(gulp.dest('css'))
-      .pipe(browserSync.reload({
-        stream: true
-      }))
-  });
+function dev(){
+  // compile scss initially
+  style()
 
-// Configure the browserSync task
-gulp.task('browserSync', function() {
-    browserSync.init({
-      server: {
-        baseDir: '.'
-      },
-    })
+  // browsersync server
+  browsersync.init({
+    server: {
+      baseDir: "./"
+    }
   })
 
-// Minify compiled CSS
-gulp.task('minify-css', function() {
-    return gulp.src('css/styles.css')
-      .pipe(autoprefixer({
-        browsers: ['last 5 versions'],
-        cascade: false
-      }))
-      .pipe(cleanCSS({
-        compatibility: 'ie8'
-      }))
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(gulp.dest('css'))
-      .pipe(browserSync.reload({
-        stream: true
-      }))
-  });
+  // watch for style changes and compile
+  gulp.watch(paths.styles.src, style)
+  gulp.watch("*.html").on("change", reload);
+}
 
-// Default task
-gulp.task('default', ['browserSync', 'sass', 'minify-css'], function() {
-    gulp.watch('scss/*.scss', ['sass']);
-    gulp.watch('css/styles.css', ['minify-css']);
-    // Reloads the browser whenever HTML files change
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('js/*.js', browserSync.reload);
-  });
+exports.style = style
+exports.dev = dev
