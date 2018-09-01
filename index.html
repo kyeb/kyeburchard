@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Kye Burchard</title>
+  <title>/home/kyeb</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- semantic stuff -->
   <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
@@ -12,7 +12,7 @@
     crossorigin="anonymous"></script>
   <script src="semantic/semantic.min.js"></script>
   <!-- compiled scss -->
-  <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121875860-1"></script>
   <script>
@@ -23,21 +23,24 @@
   </script>
 </head>
 <body>
+  <script id="__bs_script__">//<![CDATA[
+      document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace("HOST", location.hostname));
+  //]]></script>
+
 
 <div class="ui stackable grid">
-  <!-- <div class="row"></div> -->
   <div class="row"></div>
   <div class="three wide column"></div>
   <div class="ten wide column">
     <div class="ui padded segment">
-      <h1 class="ui header">Kye Burchard</h1>
+      <h1 class="ui header">/home/kyeb</h1>
     </div>
   </div>
   <div class="three wide column computer tablet only"></div>
   <div class="three wide column computer tablet only"></div>
   <div class="ten wide column">
     <div class="ui padded segment">
-      <h2 class="ui dividing header">About me</h2>
+      <h2 class="ui dividing header">~/about</h2>
       <p>
         I'm a sophomore in <a href="https://www.eecs.mit.edu/" target="_blank">EECS</a>
         at MIT (Course 6-2), a tech enthusiast, and an optimist with a passion for learning.
@@ -59,10 +62,10 @@
     <div class="ui padded segment">
       <div class="ui stackable grid">
         <div class="fourteen wide column">
-          <h2 class="ui dividing header">Projects & Experience</h2>
+          <h2 class="ui dividing header">~/projects</h2>
         </div>
         <div class="eight wide column">
-          <h3>Street Smarts</h3>
+          <h3>./streetsmarts</h3>
           <p>
             Street Smarts is a complete IoT system that brings the power of 
             interconnected devices to emergency response and street lamps.
@@ -90,14 +93,14 @@
         </div>
         <div class="fourteen wide column">
           <div class="row ui section divider"></div>
-            <h3>HackMIT</h3>
+            <h3>./hackmit</h3>
             <p>
               content
             </p>
         </div>
         <div class="fourteen wide column">
           <div class="row ui section divider"></div>
-            <h3>MHEC</h3>
+            <h3>./mhec</h3>
             <p>
               content
             </p>
@@ -105,18 +108,28 @@
       </div>
     </div>
   </div>
-  <div class="three wide column"></div>
-  <div class="three wide column"></div>
-  <div class="ui ten wide column">
-    <div class="ui equal width grid">
-      <i class="column big github link icon" onclick="window.open('https://github.com/kyeb')"></i>
-      <i class="column big instagram link icon" onclick="window.open('https://instagram.com/kye.burchard')"></i>
-      <i class="column big facebook f link icon" onclick="window.open('https://facebook.com/kyeburchard')"></i>
-      <i class="column big mail link icon" onclick="window.open('mailto:kyeb@mit.edu')"></i>
+  <div class="ui equal width grid" id="links">
+    <div class="column centered">
+      <a href="https://github.com/kyeb" class="unstyled">
+        <i class="big github icon"></i>
+      </a>
+    </div>
+    <div class="column centered">
+      <a href="https://instagram.com/kye.burchard" class="unstyled">
+        <i class="big instagram icon"></i>
+      </a>
+    </div>
+    <div class="column centered">
+      <a href="https://facebook.com/kyeburchard" class="unstyled">
+        <i class="big facebook f icon"></i>
+      </a>
+    </div>
+    <div class="column test centered">
+      <a href="mailto:kyeb@mit.edu" class="unstyled">
+        <i class="big mail icon"></i>
+      </a>
     </div>
   </div>
-  <div class="three wide column"></div>
-  <div class="row"></div>
 </div>
 </body>
 </html>
