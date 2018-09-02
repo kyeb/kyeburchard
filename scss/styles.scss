@@ -1,7 +1,8 @@
 @import "./_responsive.scss";
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-#links {
+#footer {
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -38,6 +39,14 @@ body {
     padding-bottom: 110%;
 }
 
-h1, h2, h3 {
-    font-family: Source Code Pro !important;
+h1 {
+    font-family: Source Code Pro Light !important;
+}
+
+h2, h3 {
+    font-family: Source Code Pro Light !important;
+}
+
+p {
+    font-family: Open Sans;
 }

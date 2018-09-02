@@ -4,6 +4,7 @@ var gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano')
   browsersync = require('browser-sync').create()
+  rename = require('gulp-rename');
     
 var paths = {
   styles: {
@@ -19,6 +20,7 @@ function style(){
     autoprefixer(),
     cssnano()
   ]))
+  .pipe(rename("styles.min.css"))
   .pipe(gulp.dest(paths.styles.dest))
   .pipe(browsersync.stream())
 }
