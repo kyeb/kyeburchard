@@ -5,11 +5,12 @@ var gulp = require('gulp'),
   cssnano = require('cssnano')
   browsersync = require('browser-sync').create()
   rename = require('gulp-rename');
-    
+
 var paths = {
   styles: {
     src: 'scss/styles.scss',
-    dest: 'css'
+    dest: 'css',
+    watch: 'scss/*'
   }
 }
 
@@ -39,7 +40,7 @@ function dev(){
   })
 
   // watch for style changes and compile
-  gulp.watch(paths.styles.src, style)
+  gulp.watch(paths.styles.watch, style)
   gulp.watch("*.html").on("change", reload);
 }
 
