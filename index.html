@@ -1,71 +1,56 @@
+<!-- Designed and written from scratch by Kye Burchard -->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
   <title>Kye Burchard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- favicon stuff -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-  <!-- semantic stuff -->
-  <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+  <script type="text/javascript" src="js/main.js" async></script>
   <!-- compiled scss -->
   <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+  <!-- custom imports -->
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
 </head>
 <body>
-
-<div class="ui stackable grid">
-  <div class="row"></div>
-  <div class="three wide column"></div>
-  <div class="ten wide column">
-    <div class="ui padded segment">
-      <h1 style="display: inline-block;">Kye Burchard</h1>
-      <!-- <a href="/blog.html">
-        <button style="float: right;" class="ui button">Blog</button>
-      </a> -->
-      <!-- <div class="three ui buttons">
-        <button class="ui button">About</button>
-        <button class="ui button">Projects</button>
-        <button class="ui button">Blog</button>
-      </div> -->
+  <div id="static">
+    <div class="title">
+      <h1>Kye Burchard</h1>
     </div>
-  </div>
-  <div class="three wide column computer tablet only"></div>
-  <div class="three wide column computer tablet only"></div>
-  <div class="ten wide column">
-    <div class="ui padded segment">
-      <h2>About me</h2>
-      <div class="ui divider"></div>
+    <div class="navbar">
+      <button id="defaulttab" class="tablink" onclick="openPage(event, 'about')">About me</button>
+      <button class="tablink" onclick="openPage(event, 'classes')">Classes</button>
+    </div>
+    <div id="about" class="tabcontent">
       <p>
         I'm a sophomore in <a href="https://www.eecs.mit.edu/" target="_blank">EECS</a>
         at MIT (Course 6-2), a tech enthusiast, and an optimist with a passion for learning.
-      </p><p>
+      </p><br><p>
         In my spare time, I'm working on learning back-end development and system administration,
         perfecting my Linux setup, and becoming a power i3wm and Vim user.
-      </p><p>
-        I love being outdoors whenever I can find time - whether that means skiing,
+      </p><br><p>
+        I love being outdoors whenever I can find time &mdash; whether that means skiing,
         mountain biking, and hiking when I'm home in Montana, exploring the Boston area,
         or just finding a spot outside to sit down with a good book.
       </p>
     </div>
+    <div id="classes" class="tabcontent">
+      <p>
+        TEST CONTENT
+      </p>
+    </div>
   </div>
-  <div class="three wide column column computer tablet only"></div>
-  <div class="three wide column column computer tablet only"></div>
-  <div class="ten wide column">
-    <div class="ui padded segment">
-      <div class="ui stackable grid">
-        <div class="fourteen wide column">
-          <h2>Things I do</h2>
-          <div class="ui divider"></div>
-        </div>
-        <div class="eight wide column">
-          <h3>StreetSmarts</h3>
+  <div data-simplebar id="showcase">
+    <div class="project" id="streetsmarts">
+      <img src="assets/images/street-smarts.png">
+      <div class="overlay">
+        <div class="overlay-text">
+          <h3>SteetSmarts</h3>
           <p>
-            Street Smarts is a complete IoT system that brings the power of
-            interconnected devices to emergency response and street lamps.
-          </p><p>
             Originally conceived as the final project for
             <a href="http://catalog.mit.edu/search/?P=6.08" target="_blank">6.08</a>,
             the StreetSmarts system is capable of fully facilitating communication between
@@ -76,90 +61,25 @@
             drivers to move aside and providing visual directions to the first
             responders, removing the need for slow GPS or perfect knowledge of
             the city.
-          </p><p>
-            You can find a full description of the system, including the web interface,
-            code documentation, and insight into the development process
-            <a href="https://lrylander.github.io/StreetSmarts/index.html" target="_blank">here</a>.
           </p>
         </div>
-        <div class="eight wide column container">
-          <div class="vid-wrapper">
-            <iframe class="vid" src="https://www.youtube.com/embed/yxqBb4jaiFQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-         <div class="fourteen wide column">
-          <div class="row ui section divider"></div>
-            <h3>HackMIT</h3>
-            <p>
-              DevOps, Corporate Relations, Logistics
-            </p>
-            <p>
-              As a part of the HackMIT team, I contributed to the development of
-	      various websites and software, including
-              the <a href="https://hackmit.org" target="_blank">HackMIT 2018</a> splash page.
-            </p>
-            <p>
-              You can read more about HackMIT's software at
-              <a href="https://code.hackmit.org/">code.hackmit.org</a>.
-            </p>
-        </div>
-        <div class="fourteen wide column">
-          <div class="row ui section divider"></div>
-            <h3>Rhythm Badges</h3>
-            <p>
-              During summer 2018, I worked on an experiment at the MIT Media Lab
-              using the <a href="http://www.rhythm.mit.edu/" target="_blank">Rhythm Badges</a>
-              to study team dynamics in the Delta V accelerator program at MIT.
-            </p>
-            <p>
-            </p>
-        </div>
-         <div class="fourteen wide column">
-          <div class="row ui section divider"></div>
-            <h3>Other</h3>
-            <p>
-              During the semester, I'm a mentor for MIT's
-              <a href="https://makerlodge.mit.edu">MakerLodge</a> program,
-              a makerspace and shop dedicated to teaching general maker knowledge
-              and skills to MIT's undergraduate through hands-on shop demonstrations
-              and projects.
-            </p>
-            <p>
-              I'm currently serving as the 2018 Treasurer for
-	      <a href="https://maseeh.mit.edu">Maseeh Hall</a>
-              Executive Council (MHEC) and part of Maseeh's WebTech committee.
-            </p>
+      </div>
+    </div>
+    <div class="project" id="shoppy">
+      <img src="assets/images/shoppy.png">
+      <div class="overlay">
+        <div class="overlay-text">
+          <h3>Shoppy</h3>
+          <p>
+            some text about shoppy i'll write later
+          </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="ui equal width grid" id="footer">
-    <div class="column centered">
-      <a href="https://github.com/kyeb" class="unstyled">
-        <i class="big github icon"></i>
-      </a>
-    </div>
-    <div class="column centered">
-      <a href="https://instagram.com/kye.burchard" class="unstyled">
-        <i class="big instagram icon"></i>
-      </a>
-    </div>
-    <div class="column centered">
-      <a href="https://facebook.com/kyeburchard" class="unstyled">
-        <i class="big facebook f icon"></i>
-      </a>
-    </div>
-    <div class="column centered">
-      <a href="mailto:kyeb@mit.edu" class="unstyled">
-        <i class="big mail icon"></i>
-      </a>
-    </div>
-    <div class="column centered">
-      <a href="/resume_kye.pdf" class="unstyled">
-        <i class="big file alternate icon"></i>
-      </a>
-    </div>
-  </div>
-</div>
+  <script>
+    document.getElementById('defaulttab').click();
+    console.log(document.getElementById('about'))
+  </script>
 </body>
 </html>

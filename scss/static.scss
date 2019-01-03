@@ -1,0 +1,32 @@
+#static {
+    flex: 1 0 50%;
+    @include tablet-portrait {
+        min-width: 30em;
+    }
+    padding: 2%;
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2vh;
+    }
+}
+
+.navbar button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.5em;
+    font-family: Poppins;
+    color: grey;
+}
+
+.navbar button:hover {
+    color: #000000;
+}
+
+.navbar button.active {
+    color: #000000;
+    cursor: initial;
+}
