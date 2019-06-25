@@ -40,10 +40,12 @@
     // Footer positioning
     z-index: 2;
     outline: 1px dotted green;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%;
+    @include desktop {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+    }
     padding: 10px;
 
     // Item positioning
@@ -53,7 +55,6 @@
     .link {
         // icon styling here
     }
-    @include mobile {
-        position: relative;
-    }
+    position: relative;
+    width: 100%;
 }
