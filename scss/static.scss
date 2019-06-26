@@ -8,7 +8,9 @@
         display: flex;
         justify-content: space-around;
         margin: 2vh;
-
+    }
+    @include notdesktop {
+        padding-bottom: 5vh;
     }
 }
 
@@ -39,22 +41,28 @@
 #footer {
     // Footer positioning
     z-index: 2;
-    outline: 1px dotted green;
+    padding: 20px 100px;
+    width: 100%;
+
     @include desktop {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 50%;
     }
-    padding: 10px;
+
+    @include notdesktop {
+        padding-top: 20px;
+        position: relative;
+    }
 
     // Item positioning
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
-    .link {
-        // icon styling here
+    // icon styling
+    .fab, .fas {
+        color: black;
+        font-size: 250%;
     }
-    position: relative;
-    width: 100%;
 }
