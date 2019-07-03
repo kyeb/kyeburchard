@@ -1,12 +1,20 @@
+$linkcolor: #3199DC;
+
 html, body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
 }
 
-body {
-    display: flex;
-    flex-flow: row wrap;
+@include desktop {
+    .split {
+        width: 50%;
+        height: 100%;
+        position: fixed;
+    }
+    #showcase {
+        float: right;
+    }
 }
 
 h1 {
@@ -29,5 +37,5 @@ p {
 }
 
 a {
-    color: #3199DC;
+    color: $linkcolor;
 }

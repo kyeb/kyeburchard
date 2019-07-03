@@ -1,16 +1,11 @@
 #static {
-    flex: 1 0 50%;
-    @include tablet-portrait {
-        min-width: 30em;
-    }
+    top: 0;
+    left: 0;
     padding: 2%;
     .navbar {
         display: flex;
         justify-content: space-around;
         margin: 2vh;
-    }
-    @include notdesktop {
-        padding-bottom: 5vh;
     }
 }
 
@@ -26,11 +21,11 @@
 }
 
 .navbar button:hover {
-    color: #000000;
+    color: black;
 }
 
 .navbar button.active {
-    color: #000000;
+    color: black;
     cursor: initial;
 }
 
@@ -40,7 +35,6 @@
 
 #footer {
     // Footer positioning
-    z-index: 2;
     padding: 20px 100px;
     width: 100%;
 
@@ -56,13 +50,17 @@
         position: relative;
     }
 
-    // Item positioning
+    // Icon positioning
     display: flex;
     justify-content: space-evenly;
 
-    // icon styling
+    // Icon styling
     .fab, .fas {
+        transition: 0.3s;
         color: black;
         font-size: 250%;
+    }
+    :hover {
+        color: grey;
     }
 }
