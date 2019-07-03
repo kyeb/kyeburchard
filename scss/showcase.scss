@@ -9,6 +9,9 @@
     display: flex;
     flex-direction: column;
     min-width: 600px;
+    @include desktop {
+        right: 0;
+    }
 }
 
 .project {
