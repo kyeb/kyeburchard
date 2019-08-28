@@ -1,6 +1,6 @@
 {
   "name": "kyeb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Personal website for me (Kye Burchard)",
   "main": "gulpfile.js",
   "dependencies": {},
