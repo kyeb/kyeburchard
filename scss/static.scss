@@ -1,0 +1,66 @@
+#static {
+    top: 0;
+    left: 0;
+    padding: 2%;
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        margin: 2vh;
+    }
+}
+
+.navbar button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.5em;
+    font-family: Poppins;
+    color: grey;
+}
+
+.navbar button:hover {
+    color: black;
+}
+
+.navbar button.active {
+    color: black;
+    cursor: initial;
+}
+
+#classes {
+    display: none;
+}
+
+#footer {
+    // Footer positioning
+    padding: 20px 100px;
+    width: 100%;
+
+    @include desktop {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+    }
+
+    @include notdesktop {
+        padding-top: 20px;
+        position: relative;
+    }
+
+    // Icon positioning
+    display: flex;
+    justify-content: space-evenly;
+
+    // Icon styling
+    .fab, .fas {
+        transition: 0.3s;
+        color: black;
+        font-size: 250%;
+    }
+    :hover {
+        color: grey;
+    }
+}
