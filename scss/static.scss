@@ -9,7 +9,7 @@
     }
 }
 
-.navbar button {
+button {
     background-color: inherit;
     border: none;
     outline: none;
@@ -18,15 +18,23 @@
     font-size: 1.5em;
     font-family: Poppins;
     color: grey;
+    &:hover {
+        color: black;
+    }
+
+    &.active {
+        color: black;
+        cursor: initial;
+    }
 }
 
-.navbar button:hover {
-    color: black;
+.button-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-.navbar button.active {
-    color: black;
-    cursor: initial;
+#coursework-toggle {
+    font-size: 0.95em;
 }
 
 #classes {

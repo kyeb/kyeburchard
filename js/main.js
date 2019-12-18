@@ -19,3 +19,43 @@ function openPage(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
+var courses;
+// Initially hide irrelevant courses when page loads
+function initializeCourses() {
+    courses = document.getElementsByClassName("class");
+    for (i = 0; i < courses.length; i++) {
+        if (!courses[i].classList.contains("relevant")) {
+            courses[i].style.display = "none";
+        }
+    }
+    // Listen for button clicks.
+    var toggle = document.getElementById("coursework-toggle");
+    toggle.addEventListener("click", toggleCoursework);
+    toggle.textContent = showAllText;
+}
+document.addEventListener("DOMContentLoaded", initializeCourses);
+
+var showAll = false;
+var showAllText = "[show all courses]";
+var showRelevantText = "[show only relevant courses]";
+// Relevant vs. all coursework
+function toggleCoursework() {
+    // Do the toggle.
+    showAll = !showAll;
+
+    courses = document.getElementsByClassName("class");
+    for (var i = 0; i < courses.length; i++) {
+        if (showAll) {
+            courses[i].style.display = "";
+        } else if (!courses[i].classList.contains("relevant")) {
+            courses[i].style.display = "none";
+        }
+    }
+
+    // Fix up the button text
+    if (showAll) {
+        document.getElementById("coursework-toggle").textContent = showRelevantText;
+    } else {
+        document.getElementById("coursework-toggle").textContent = showAllText;
+    }
+}
