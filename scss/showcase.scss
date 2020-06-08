@@ -1,53 +1,54 @@
 #showcase {
-    flex: 1 1 50%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    img {
-        width: 100%;
-        display: block;
-    }
-    display: flex;
-    flex-direction: column;
-    min-width: 600px;
-    @include desktop {
-        right: 0;
-    }
+  flex: 1 1 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  img {
+    width: 100%;
+    display: block;
+  }
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+  @include desktop {
+    right: 0;
+  }
 }
 
 .project {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .overlay {
-    // Size the div to the image
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    // Fade to black background for text viewing
-    opacity: 0;
-    transition: opacity 0.4s;
-    background-color: black;
+  // Size the div to the image
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  // Fade to black background for text viewing
+  opacity: 0;
+  transition: opacity 0.4s;
+  background-color: black;
 }
 
 .overlay:hover {
-    display: block;
-    transition: opacity 0.4s;
-    opacity: 0.75;
-    p, h3 {
-        opacity: 1;
-        color: white;
-    }
+  display: block;
+  transition: opacity 0.4s;
+  opacity: 0.75;
+  p,
+  h3 {
+    opacity: 1;
+    color: white;
+  }
 }
 
 .overlay-text {
-    height: 100%;
-    padding: 2em;
-    // Text styling
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 100%;
+  padding: 2em;
+  // Text styling
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
