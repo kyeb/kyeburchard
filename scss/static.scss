@@ -1,74 +1,75 @@
 #static {
-    top: 0;
-    left: 0;
-    padding: 2%;
-    .navbar {
-        display: flex;
-        justify-content: space-around;
-        margin: 2vh;
-    }
+  top: 0;
+  left: 0;
+  padding: 2%;
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    margin: 2vh;
+  }
 }
 
 button {
-    background-color: inherit;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 1.5em;
-    font-family: Poppins;
-    color: grey;
-    &:hover {
-        color: black;
-    }
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.5em;
+  font-family: Poppins;
+  color: grey;
+  &:hover {
+    color: black;
+  }
 
-    &.active {
-        color: black;
-        cursor: initial;
-    }
+  &.active {
+    color: black;
+    cursor: initial;
+  }
 }
 
 .button-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #coursework-toggle {
-    font-size: 0.95em;
+  font-size: 0.95em;
 }
 
 #classes {
-    display: none;
+  display: none;
 }
 
 #footer {
-    // Footer positioning
-    padding: 20px 100px;
-    width: 100%;
+  // Footer positioning
+  padding: 20px 100px;
+  width: 100%;
 
-    @include desktop {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50%;
-    }
+  @include desktop {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+  }
 
-    @include notdesktop {
-        padding-top: 20px;
-        position: relative;
-    }
+  @include notdesktop {
+    padding-top: 20px;
+    position: relative;
+  }
 
-    // Icon positioning
-    display: flex;
-    justify-content: space-evenly;
+  // Icon positioning
+  display: flex;
+  justify-content: space-evenly;
 
-    // Icon styling
-    .fab, .fas {
-        transition: 0.3s;
-        color: black;
-        font-size: 250%;
-    }
-    :hover {
-        color: grey;
-    }
+  // Icon styling
+  .fab,
+  .fas {
+    transition: 0.3s;
+    color: black;
+    font-size: 250%;
+  }
+  :hover {
+    color: grey;
+  }
 }
