@@ -1,0 +1,8 @@
+- hosts: juniper
+  remote_user: kyeb
+  tasks:
+    - name: get latest version from github
+      git:
+        repo: ssh://git@github.com/kyeb/kyeburchard.git
+        version: master
+        dest: /srv/kyeburchard
