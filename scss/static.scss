@@ -3,11 +3,16 @@
   left: 0;
   padding: 2%;
   overflow-y: auto;
+  min-height: 100%;
   .navbar {
     display: flex;
     justify-content: space-around;
     margin: 2vh;
   }
+}
+
+.tabcontent {
+  padding-bottom: 82px;
 }
 
 button {
@@ -44,8 +49,10 @@ button {
 
 #footer {
   // Footer positioning
-  padding: 20px 100px;
+  padding: 20px 100px 10px;
   width: 100%;
+
+  overflow: hidden;
 
   @include desktop {
     position: absolute;
@@ -55,7 +62,6 @@ button {
   }
 
   @include notdesktop {
-    padding-top: 20px;
     position: relative;
   }
 
@@ -72,5 +78,20 @@ button {
   }
   :hover {
     color: grey;
+  }
+
+  .link {
+    z-index: 0;
+  }
+
+  .footer-background {
+    position: absolute;
+    background-color: grey;
+    opacity: 0.3;
+    border-radius: 15px;
+
+    top: 10px;
+    width: 70%;
+    height: 100%;
   }
 }
