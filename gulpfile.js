@@ -1,10 +1,10 @@
-var gulp = require("gulp"),
-  sass = require("gulp-sass"),
-  postcss = require("gulp-postcss"),
-  autoprefixer = require("autoprefixer"),
-  cssnano = require("cssnano");
-browsersync = require("browser-sync").create();
-rename = require("gulp-rename");
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
+const browsersync = require("browser-sync").create();
+const rename = require("gulp-rename");
 
 var paths = {
   styles: {
